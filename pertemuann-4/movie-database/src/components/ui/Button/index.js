@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 
 // Membuat Component Button
 const Button = styled.button`
-    padding: 1rem;
+    padding: ${({theme, size}) => theme.paddings[size] || theme.paddings.md};
+    font-size: ${({theme, size}) => theme.fontsizes[size] || theme.fontsizes.md};
     border-radius: 10px;
     color: #fff;
     background-color: #4361ee;

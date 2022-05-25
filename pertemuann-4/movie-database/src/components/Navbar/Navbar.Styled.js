@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledNavbar = styled.div`
-    background-color: #4361ee;
+    background-color: ${({theme, variant}) => theme.colors[variant] || theme.colors.primary};
     padding: 1rem;
     color: #fff;
 

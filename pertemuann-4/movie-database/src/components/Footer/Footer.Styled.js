@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-    background-color: #4361ee;
+    background-color: ${({theme, variant}) => theme.colors[variant] || theme.colors.primary};
     color: #fff;
     padding: 1rem;
     text-align: center;
