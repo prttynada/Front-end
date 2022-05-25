@@ -2,16 +2,16 @@
  * Import CSS Module Footer
  * Disimpan di object styles
  */
-import styles from "./Footer.module.css";
+import StyledFooter from "./Footer.Styled";
 
 function Footer() {
     return (
-        <div className={styles.container}>
+        <StyledFooter>
             <footer>
-                <h2 className={styles.footer__title}>Movie App</h2>
-                <p className={styles.footer__author}>Created by Nada</p>
+                <h2>Movie App</h2>
+                <p>Created by Nada</p>
             </footer>
-        </div>
+        </StyledFooter>
     );
 }
 

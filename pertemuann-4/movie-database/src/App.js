@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import CreateMovie from "./pages/movie/Create";
 import NowPlayingMovie from "./pages/movie/NowPlaying";
 import PopularMovie from "./pages/movie/Popular";
 import TopRatedMovie from "./pages/movie/TopRated";
+import theme from "./utils/constrants/theme";
 
 function App() {
   /* 
@@ -14,15 +16,21 @@ function App() {
   */
   return (
     <>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movie/create" element={<CreateMovie />} />
-          <Route path="/movie/popular" element={<PopularMovie />} />
-          <Route path="/movie/now" element={<NowPlayingMovie />} />
-          <Route path="/movie/top" element={<TopRatedMovie />} />
-        </Routes>
-      </Layout>
+      {/* 
+      - Bungkus App dengan ThemProvider
+      - Beri props theme dengan tema yang sudah dibuat
+      */}
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/create" element={<CreateMovie />} />
+            <Route path="/movie/popular" element={<PopularMovie />} />
+            <Route path="/movie/now" element={<NowPlayingMovie />} />
+            <Route path="/movie/top" element={<TopRatedMovie />} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }

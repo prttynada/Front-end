@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
+import Button from "../ui/Button";
 import styles from "./AddMovieForm.module.css";
 
 
@@ -146,7 +147,7 @@ function AddMovieForm(props) {
                             <input onChange={handleChange} name="picture" id="picture" type="text" className={styles.addMovieForm__input} value={picture} />
                             { pictureErr && <Alert>Link picture wajib diisi!</Alert> }
                         </div>
-                        <button className={styles.addMovieForm__button}>Submit</button>
+                        <Button full>Add Movie</Button>
                     </form>
                 </div>
             </section>
