@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 const StyledHero = styled.div`
-    margin: 1rem;
+    margin: 1rem 2rem;
 
     section {
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin: 1rem;
     }
 
     .hero__left {
         margin-bottom: 1rem;
+        margin-right: 3rem;
+        margin-left: 3rem;
     }
 
     h2 {
@@ -27,7 +30,7 @@ const StyledHero = styled.div`
 
     p {
         color: #64748b;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     img {

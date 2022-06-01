@@ -1,6 +1,7 @@
 /* Small Screen */
 .container {
     margin: 1rem;
+    margin-top: 2rem;
 }
 
 .movies {
