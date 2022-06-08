@@ -16,6 +16,8 @@ const StyledNavbar = styled.div`
     }
 
     ul {
+        display: flex;
+        flex-direction: column;
         list-style: none;
     }
 
@@ -40,7 +42,6 @@ const StyledNavbar = styled.div`
         }
 
         ul {
-            display: flex;
             flex-direction: row;
         }
 

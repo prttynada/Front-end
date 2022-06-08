@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
 import Button from "../ui/Button";
-import styles from "./AddMovieForm.module.css";
+import StyledAddMovieForm from "./AddMovieForm.Styled";
 
 
 function AddMovieForm(props) {
@@ -107,30 +107,30 @@ function AddMovieForm(props) {
     const { titleErr, dateErr, pictureErr, genreErr } = isFormError;
 
     return(
-        <div className={styles.container}>
-            <section className={styles.addMovieForm}>
-                <div className={styles.addMovieForm__left}>
-                    <img className={styles.addMovieForm__image} src="https://picsum.photos/350/250" alt="placeholder" />
+        <StyledAddMovieForm>
+            <section>
+                <div className="addMovieForm__left">
+                    <img src="https://picsum.photos/350/250" alt="placeholder" />
                 </div>
-                <div className={styles.addMovieForm__right}>
-                    <h2 className={styles.addMovieForm__title}>Add Movie</h2>
-                    <form action="" className={styles.addMovieForm__form} onSubmit={handleSubmit} >
-                        <div className={styles.addMovieForm__formEl}>
+                <div className="addMovieForm__right">
+                    <h2>Add Movie</h2>
+                    <form  onSubmit={handleSubmit} >
+                        <div className="addMovieForm__formEl">
                             <label htmlFor="title">Title</label><br />
-                            <input onChange={handleChange} name="title" id="title" type="text" className={styles.addMovieForm__input} value={title} />
+                            <input onChange={handleChange} name="title" id="title" type="text" value={title} />
                             {/* 
                             jika error title tru: muncul errror
                             jika tidak, munculkan string kosong */}
                             {titleErr && <Alert>Title wajib diisi!</Alert> }
                         </div>
-                        <div className={styles.addMovieForm__formEl}>
+                        <div className="addMovieForm__formEl">
                             <label htmlFor="date">Date</label><br />
-                            <input onChange={handleChange} name="date" id="date" type="number" className={styles.addMovieForm__input} value={date} />
+                            <input onChange={handleChange} name="date" id="date" type="number" value={date} />
                             { dateErr && <Alert>Date wajib diisi!</Alert> }
                         </div>
-                        <div className={styles.addMovieForm__formEl}>
+                        <div className="addMovieForm__formEl">
                             <label htmlFor="genre">Genre</label><br />
-                            <select onChange={handleChange} name="genre" id="select" className={styles.addMovieForm__input} value={genre}>
+                            <select onChange={handleChange} name="genre" id="select" value={genre}>
                                 <option value="romance">Romance</option>
                                 <option value="thriller">Thriller</option>
                                 <option value="action">Action</option>
@@ -142,16 +142,16 @@ function AddMovieForm(props) {
                             </select>
                             { genreErr && <Alert>Genre wajib diisi!</Alert> }
                         </div>
-                        <div className={styles.addMovieForm__formEl}>
+                        <div className="addMovieForm__formEl">
                             <label htmlFor="picture">Picture Link</label><br />
-                            <input onChange={handleChange} name="picture" id="picture" type="text" className={styles.addMovieForm__input} value={picture} />
+                            <input onChange={handleChange} name="picture" id="picture" type="text" value={picture} />
                             { pictureErr && <Alert>Link picture wajib diisi!</Alert> }
                         </div>
                         <Button full>Add Movie</Button>
                     </form>
                 </div>
             </section>
-        </div>
+        </StyledAddMovieForm>
     );
 }
 

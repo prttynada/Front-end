@@ -21,7 +21,7 @@ function Navbar() {
                             <Link to="/movie/create">Add Movie</Link>
                         </li>
                         <li>
-                            <Link to="/movie/popular">Pupolar</Link>
+                            <Link to="/movie/popular">Popular</Link>
                         </li>
                         <li>
                             <Link to="/movie/now">Now Playing</Link>

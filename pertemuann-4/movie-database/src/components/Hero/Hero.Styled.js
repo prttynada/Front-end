@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 const StyledHero = styled.div`
-    margin: 1rem 2rem;
+    margin: 5rem auto;
+    padding: 1rem;
 
     section {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 1rem;
     }
 
     .hero__left {
         margin-bottom: 1rem;
-        margin-right: 3rem;
-        margin-left: 3rem;
     }
 
     h2 {
@@ -31,6 +29,7 @@ const StyledHero = styled.div`
     p {
         color: #64748b;
         margin-bottom: 2rem;
+        text-align: justify;
     }
 
     img {
@@ -45,20 +44,15 @@ const StyledHero = styled.div`
 
     @media (min-width: 992px) {
         min-width: 1200px;
-        margin: 3rem auto;
 
         section {
-            margin: 0 1rem;
             flex-direction: row;
             justify-content: space-between;
-            align-items: left;
+            align-items: center;
+            text-align: left;
         }
 
         .hero__left {
-            flex-basis: 60%;
-        }
-
-        .hero__right {
             flex-basis: 40%;
         }
     }
