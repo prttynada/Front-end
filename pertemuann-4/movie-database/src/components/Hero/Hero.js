@@ -10,13 +10,14 @@ function Hero() {
     const [movie, setMovie] = useState("");
     const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
     const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
+    
 
     useEffect(getDetailMovie, []);
 
     // Mendapatkan 1 data dari trending movies
     async function getTrendingMovies() {
         const response = await axios(ENDPOINTS.TRENDINGMOVIE);
-        return response.data.results[0];
+        return response.data.results[1];
     }
 
     // Membuat fungsi untuk mendapatkan detail movie
