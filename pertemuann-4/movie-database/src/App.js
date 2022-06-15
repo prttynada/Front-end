@@ -7,7 +7,7 @@ import Detail from "./pages/movie/Detail";
 import NowPlayingMovie from "./pages/movie/NowPlaying";
 import PopularMovie from "./pages/movie/Popular";
 import TopRatedMovie from "./pages/movie/TopRated";
-import theme from "./utils/constrants/theme";
+import theme from "./utils/constants/theme";
 
 function App() {
   /* 

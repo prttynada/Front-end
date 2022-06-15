@@ -2,9 +2,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ENDPOINTS from "../../utils/constrants/endpoint";
+import ENDPOINTS from "../../utils/constants/endpoint";
 import Button from "../ui/Button";
 import StyledDetailMovie from "./DetailMovie.styled";
+
 
 function DetailMovie() {
     /**

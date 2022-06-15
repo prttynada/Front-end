@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ENDPOINTS from "../../utils/constrants/endpoint";
+import ENDPOINTS from "../../utils/constants/endpoint";
 import Button from "../ui/Button";
 import StyledHero from "./Hero.Styled";
 
@@ -9,7 +9,7 @@ function Hero() {
     // Membuat state movie
     const [movie, setMovie] = useState("");
     const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
-    const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`
+    const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
 
     useEffect(getDetailMovie, []);
 
